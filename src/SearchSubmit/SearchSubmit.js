@@ -1,12 +1,13 @@
 import React from 'react';
+//import config from '../config';
 import './SearchSubmit.css';
 
-class SearchSubmit extends React.Component {
+export default class SearchSubmit extends React.Component {
   state={
     results: ''
   }
 
-  handleSearchSubmit = (foodName) => {
+  handleSearchSubmit = (foodname) => {
     this.setState({
       results: this.setState.results
     })
@@ -14,14 +15,15 @@ class SearchSubmit extends React.Component {
 
   render() {
     return(
-      <form class="recipe-search-form">
-        <label for="search-bar">Search Recipe: </label>
-        <input type="text" name="search-bar" placeholder="Food Name" required></input>
-        <button type="submit">Submit</button>
-      </form>
+      <main>
+        <form className="recipe-search-form">
+          <label htmlFor="search-bar">Search Recipe: </label>
+          <input type="text" name="search-bar" placeholder="Food Name" required></input>
+          <button type="submit">Submit</button>
+        </form>
+      </main>
     )
   }
 };
 
-export default SearchSubmit;
 

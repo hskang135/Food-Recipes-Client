@@ -3,7 +3,12 @@ import config from './config';
 import { Route } from 'react-router-dom';
 import RecipesContext from './RecipesContext';
 import SearchSubmit from './SearchSubmit/SearchSubmit';
-class App extends React.Component {
+import SeeAllRecipes from './SeeAllRecipes/SeeAllRecipes';
+import Header from './Header/Header';
+import ResultList from './ResultList/ResultList';
+import RecipeItem from './RecipeItem/RecipeItem';
+import AddRecipe from './AddRecipe/AddRecipe';
+export default class App extends React.Component {
   state = {
     recipes: [],
     error: null,
@@ -16,18 +21,18 @@ class App extends React.Component {
     })
   };
 
-  addRecipe = Recipe => {
+  addRecipe = recipe => {
     this.setState({
-      recipes: [ ...this.state.recipes, Recipe ],
+      recipes: [ ...this.state.recipes, recipe ],
     })
   };
 
   deleteRecipe = RecipeId => {
-    const newrecipes = this.state.recipes.filter(rs =>
+    const newRecipe = this.state.recipes.filter(rs =>
       rs.id !== RecipeId
     )
     this.setState({
-      recipes: newrecipes
+      recipes: newRecipe
     })
   };
 
@@ -55,7 +60,6 @@ class App extends React.Component {
       })
       .then(this.setRecipes)
       .catch(error => {
-        console.log(error)
         this.setState({error})
       })
   };
@@ -65,16 +69,38 @@ class App extends React.Component {
       recipes: this.state.recipes,
       addRecipe: this.addRecipe,
       deleteRecipe: this.deleteRecipe,
-      updatedRecipe: this.updateRecipe
+      updatedRecipe: this.updatedRecipe
     };
     
     return (
       <main className='App'>
-        <h1>Food Recipes</h1>
+        <header className='App_header'>
+          <Header />
+        </header>
         <RecipesContext.Provider value={value}>
           <Route 
-            path= '/'
+            path='/'
             component={SearchSubmit}
+          />
+
+          <Route 
+            path= '/'
+            component={SeeAllRecipes}
+          />
+
+          <Route 
+            path='/'
+            component={ResultList}
+          />
+
+          <Route 
+            path='/'
+            component={RecipeItem}
+          />
+
+          <Route 
+            path='/'
+            component={AddRecipe}
           />
 
         </RecipesContext.Provider>
@@ -85,4 +111,3 @@ class App extends React.Component {
 };
 
 
-export default App;

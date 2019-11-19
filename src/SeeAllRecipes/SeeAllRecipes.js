@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-//import config from '../config';
+import './SeeAllRecipes.css';
 
-export default class ResultList extends Component {
+export default class SeeAllRecipes extends Component {
+  state = {
+    error: null,
+  };
 
 
 
   render() {
-    return(
+    return (
       <main>
         <div className="search-result-container">
           <h2>Food Name</h2>
@@ -24,10 +27,12 @@ export default class ResultList extends Component {
           <h2>Food Name</h2>
         </div>
 
+        <div className="search-result-container">
+          <h2>Food Name</h2>
+        </div>
       </main>
     )
   }
 
 };
-
 
