@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './SeeAllRecipes.css';
 
 export default class SeeAllRecipes extends Component {
-  state = {
-    error: null,
-  };
+  // state = {
+  //   error: null,
+  // };
 
 
 

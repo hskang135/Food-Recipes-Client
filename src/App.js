@@ -3,7 +3,7 @@ import config from './config';
 import { Route } from 'react-router-dom';
 import RecipesContext from './RecipesContext';
 import SearchSubmit from './SearchSubmit/SearchSubmit';
-import SeeAllRecipes from './SeeAllRecipes/SeeAllRecipes';
+import SeeAllfoodrecipes from './SeeAllRecipes/SeeAllRecipes';
 import Header from './Header/Header';
 import ResultList from './ResultList/ResultList';
 import RecipeItem from './RecipeItem/RecipeItem';
@@ -11,42 +11,51 @@ import AddRecipe from './AddRecipe/AddRecipe';
 
 export default class App extends React.Component {
   state = {
-    recipes: [],
+    foodrecipes: [],
     error: null,
   };
 
-  setRecipes = recipes => {
+  setRecipes = foodrecipes => {
     this.setState({
-      recipes,
+      foodrecipes,
       error: null,
     })
   };
 
   addRecipe = recipe => {
     this.setState({
-      recipes: [ ...this.state.recipes, recipe ],
+      foodrecipes: [ ...this.state.foodrecipes, recipe ],
     })
   };
 
-  deleteRecipe = RecipeId => {
-    const newRecipe = this.state.recipes.filter(rs =>
-      rs.id !== RecipeId
+  deleteRecipe = recipeId => {
+    const newRecipe = this.state.foodrecipes.filter(rs =>
+      rs.id !== recipeId
     )
     this.setState({
-      recipes: newRecipe
+      foodrecipes: newRecipe
     })
   };
 
   updateRecipe = updatedRecipe => {
     this.setState({
-      recipes: this.state.recipes.map(rs =>
+      foodrecipes: this.state.foodrecipes.map(rs =>
         (rs.id !== updatedRecipe.id) ? rs : updatedRecipe
       )
     })
   };
 
+  editRecipe = (recipeId, recipeData) => {
+    this.setState({
+      foodrecipes: this.state.foodrecipes.map(r =>
+        r.id === Number(recipeId) ? {...r, ...recipeData} : r
+      )
+    })
+  }
+
   componentDidMount() {
-    fetch(config.API_ENDPOINT, {
+    console.log(config.API_ENDPOINT)
+    fetch(`${config.API_ENDPOINT}/foodrecipes`, {
       method: 'GET',
       headers: {
         'content-type': 'application/json'
@@ -58,7 +67,7 @@ export default class App extends React.Component {
         }
         return res.json()
       })
-      .then(this.setRecipes)
+      .then(this.setfoodrecipes)
       .catch(error => {
         this.setState({error})
       })
@@ -66,10 +75,11 @@ export default class App extends React.Component {
 
   render() {
     const contextValue = {
-      recipes: this.state.recipes,
+      foodrecipes: this.state.foodrecipes,
       addRecipe: this.addRecipe,
       deleteRecipe: this.deleteRecipe,
-      updatedRecipe: this.updatedRecipe
+      updatedRecipe: this.updatedRecipe,
+      editRecipe: this.editRecipe
     };
     
     return (
@@ -78,27 +88,32 @@ export default class App extends React.Component {
           <Header />
         </header>
         <RecipesContext.Provider value={contextValue}>
-          <Route 
+          <Route
+            exact 
             path='/'
             component={SearchSubmit}
           />
 
-          <Route 
+          <Route
+            exact 
             path= '/'
-            component={SeeAllRecipes}
+            component={SeeAllfoodrecipes}
           />
 
           <Route 
+            exact
             path='/'
             component={ResultList}
           />
 
           <Route 
+            exact
             path='/'
             component={RecipeItem}
           />
 
           <Route 
+            exact
             path='/'
             component={AddRecipe}
           />
