@@ -8,6 +8,7 @@ import Header from './Header/Header';
 import ResultList from './ResultList/ResultList';
 import RecipeItem from './RecipeItem/RecipeItem';
 import AddRecipe from './AddRecipe/AddRecipe';
+
 export default class App extends React.Component {
   state = {
     recipes: [],
@@ -48,8 +49,7 @@ export default class App extends React.Component {
     fetch(config.API_ENDPOINT, {
       method: 'GET',
       headers: {
-        'content-type': 'application/json',
-        'Authorization': `Bearer ${config.API_ENDPOINT}`
+        'content-type': 'application/json'
       }
     })
       .then(res => {
@@ -65,7 +65,7 @@ export default class App extends React.Component {
   };
 
   render() {
-    const value = {
+    const contextValue = {
       recipes: this.state.recipes,
       addRecipe: this.addRecipe,
       deleteRecipe: this.deleteRecipe,
@@ -77,7 +77,7 @@ export default class App extends React.Component {
         <header className='App_header'>
           <Header />
         </header>
-        <RecipesContext.Provider value={value}>
+        <RecipesContext.Provider value={contextValue}>
           <Route 
             path='/'
             component={SearchSubmit}
