@@ -3,10 +3,8 @@ import config from './config';
 import { Route } from 'react-router-dom';
 import RecipesContext from './RecipesContext';
 import SearchSubmit from './SearchSubmit/SearchSubmit';
-import SeeAllfoodrecipes from './SeeAllRecipes/SeeAllRecipes';
 import Header from './Header/Header';
-import ResultList from './ResultList/ResultList';
-import RecipeItem from './RecipeItem/RecipeItem';
+import RecipeList from './RecipeList/RecipeList';
 import AddRecipe from './AddRecipe/AddRecipe';
 
 export default class App extends React.Component {
@@ -14,7 +12,6 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-      filterName: '',
       recipes: [],
       searchName: {
         results: null,
@@ -25,31 +22,31 @@ export default class App extends React.Component {
     }
   };
 
-  setRecipes = foodrecipes => {
+  setRecipes = recipes => {
     this.setState({
-      foodrecipes,
+      recipes,
       error: null,
     })
   };
 
   addRecipe = recipe => {
     this.setState({
-      foodrecipes: [ ...this.state.foodrecipes, recipe ],
+      recipes: [ ...this.state.recipes, recipe ],
     })
   };
 
   deleteRecipe = recipeId => {
-    const newRecipe = this.state.foodrecipes.filter(rs =>
+    const newRecipe = this.state.recipes.filter(rs =>
       rs.id !== recipeId
     )
     this.setState({
-      foodrecipes: newRecipe
+      recipes: newRecipe
     })
   };
 
   updateRecipe = updatedRecipe => {
     this.setState({
-      foodrecipes: this.state.foodrecipes.map(rs =>
+      recipes: this.state.recipes.map(rs =>
         (rs.id !== updatedRecipe.id) ? rs : updatedRecipe
       )
     })
@@ -57,23 +54,22 @@ export default class App extends React.Component {
 
   editRecipe = (recipeId, recipeData) => {
     this.setState({
-      foodrecipes: this.state.foodrecipes.map(r =>
+      recipes: this.state.recipes.map(r =>
         r.id === Number(recipeId) ? {...r, ...recipeData} : r
       )
     })
   };
 
-  handleSearchSubmit = (foodname) => {
+  handleSearchSubmit = (id) => {
     this.setState({
-      filter: foodname
+      recipes: this.state.recipes.filter(rec => rec.id === id)
     })
-    //add another state property to filter recipes
-    //
   };
 
   componentDidMount() {
-    console.log(config.API_ENDPOINT)
-    fetch(`${config.API_ENDPOINT}/foodrecipes`, {
+    console.log(`${config.API_ENDPOINT}/recipes`);
+
+    fetch(`${config.API_ENDPOINT}/recipes`, {
       method: 'GET',
       headers: {
         'content-type': 'application/json'
@@ -94,15 +90,13 @@ export default class App extends React.Component {
   };
 
   render() {
-    const recipes = this.state.recipes.filter(recipe => recipe.includes(this.state.filter));
     const contextValue = {
-      foodrecipes: this.state.foodrecipes,
+      recipes: this.state.recipes,
       addRecipe: this.addRecipe,
       deleteRecipe: this.deleteRecipe,
       updatedRecipe: this.updatedRecipe,
       editRecipe: this.editRecipe,
-      handleSearchSubmit: this.handleSearchSubmit,
-      recipes
+      handleSearchSubmit: this.handleSearchSubmit
     };
     
     return (
@@ -117,23 +111,14 @@ export default class App extends React.Component {
             component={SearchSubmit}
           />
 
-          <Route
-            exact 
-            path= '/'
-            component={SeeAllfoodrecipes}
-          />
-
-          <Route 
+          {['/', '/:id'].map(path =>
+            <Route 
             exact
-            path='/'
-            component={ResultList}
-          />
-
-          <Route 
-            exact
-            path='/'
-            component={RecipeItem}
-          />
+            key={path}
+            path={path}
+            component={RecipeList}
+            />
+          )}
 
           <Route 
             exact
