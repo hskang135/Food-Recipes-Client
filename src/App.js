@@ -10,9 +10,17 @@ import RecipeItem from './RecipeItem/RecipeItem';
 import AddRecipe from './AddRecipe/AddRecipe';
 
 export default class App extends React.Component {
-  state = {
-    foodrecipes: [],
-    error: null,
+  
+  constructor(props) {
+    super(props);
+    this.state={
+      searchName: {
+        results: null,
+        error: null,
+        search: false,
+        loading: false,
+      }
+    }
   };
 
   setRecipes = foodrecipes => {
@@ -51,27 +59,67 @@ export default class App extends React.Component {
         r.id === Number(recipeId) ? {...r, ...recipeData} : r
       )
     })
-  }
+  };
 
-  componentDidMount() {
-    console.log(config.API_ENDPOINT)
+  handleSearchSubmit = (foodname) => {
+    this.setState({
+      lodaing: true
+    })
+
     fetch(`${config.API_ENDPOINT}/foodrecipes`, {
       method: 'GET',
       headers: {
         'content-type': 'application/json'
       }
     })
-      .then(res => {
-        if(!res.ok) {
-          return res.json().then(error => Promise.reject(error))
-        }
-        return res.json()
+    .then(res => {
+      if(!res.ok) {
+        throw new Error(res.statusText)
+      }
+      return res.json()
+    })
+    .then(data => {
+      console.log(data);
+      if(data.count === 0) {
+        this.setState({
+          results: null,
+          search: true,
+        })
+      } else {
+        this.setState({
+          search: true,
+          results: data.results.map(result => {
+            return result;
+          })
+        })
+      }
+    })
+    .catch(err => {
+      this.setState ({
+        error: err.message
       })
-      .then(this.setfoodrecipes)
-      .catch(error => {
-        this.setState({error})
-      })
+    })
   };
+
+  // componentDidMount() {
+  //   console.log(config.API_ENDPOINT)
+  //   fetch(`${config.API_ENDPOINT}/foodrecipes`, {
+  //     method: 'GET',
+  //     headers: {
+  //       'content-type': 'application/json'
+  //     }
+  //   })
+  //     .then(res => {
+  //       if(!res.ok) {
+  //         return res.json().then(error => Promise.reject(error))
+  //       }
+  //       return res.json()
+  //     })
+  //     .then(this.setfoodrecipes)
+  //     .catch(error => {
+  //       this.setState({error})
+  //     })
+  // };
 
   render() {
     const contextValue = {
