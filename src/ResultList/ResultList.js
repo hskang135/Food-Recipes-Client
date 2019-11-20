@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import RecipesContext from '../RecipesContext';
 //import PropTypes from 'prop-types';
 //import config from '../config';
 
 export default class ResultList extends Component {
 
+  static contextType = RecipesContext;
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +14,7 @@ export default class ResultList extends Component {
         touched: false
       }
     }
-  }
+  };
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -24,6 +26,7 @@ export default class ResultList extends Component {
       touched: false
     })
   };
+
   updateNameSearch = (name) => {
     this.setState({ 
         searchName: 
@@ -40,6 +43,7 @@ export default class ResultList extends Component {
   };
 
   render() {
+    console.log(this.context.recipes);
     return(
       <main>
         <div className="search-result-container">
