@@ -26,7 +26,8 @@ export default class SearchSubmit extends React.Component {
           <label htmlFor="search-bar">Search Recipe: </label>
           <input id='SearchName' type="text" placeholder="Food Name" 
             onChange={(e) => this.updateSearch(e.target.value)}required />
-          <button type="submit">Submit</button> 
+          
+          <button type="submit">Submit</button>
         </div>
 
         <div>

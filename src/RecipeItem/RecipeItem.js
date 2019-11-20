@@ -10,11 +10,10 @@ export default function RecipeItem(props) {
           <li className ='RecipeItem'>
             <div className = 'RecipeItem_row'>
               <h2>{props.foodname}</h2>
+              
               <ul>
-                <li>{props.ingredients}</li>
-              </ul>
-              <ul>
-                <li>{props.description}</li>
+                <li>Ingredients: {props.ingredients}</li>
+                <li>Description: {props.description}</li>
               </ul>
             </div>
           </li>
