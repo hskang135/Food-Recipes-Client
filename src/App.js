@@ -6,6 +6,7 @@ import SearchSubmit from './SearchSubmit/SearchSubmit';
 import Header from './Header/Header';
 import RecipeList from './RecipeList/RecipeList';
 import AddRecipe from './AddRecipe/AddRecipe';
+import CreatedRecipe from './CreatedRecipe/CreatedRecipe';
 
 export default class App extends React.Component {
   
@@ -81,8 +82,8 @@ export default class App extends React.Component {
         }
         return res.json()
       })
-      .then((foods) => {
-        this.setRecipes(foods)
+      .then((recipes) => {
+        this.setRecipes(recipes)
       })
       .catch(error => {
         this.setState({error})
@@ -111,7 +112,7 @@ export default class App extends React.Component {
             component={SearchSubmit}
           />
 
-          {['/', '/:id'].map(path =>
+          {['/', '/recipes/:id'].map(path =>
             <Route 
             exact
             key={path}
@@ -122,8 +123,14 @@ export default class App extends React.Component {
 
           <Route 
             exact
-            path='/'
+            path='/myrecipes'
             component={AddRecipe}
+          />
+
+          <Route 
+            exact
+            path='/myrecipes'
+            component={CreatedRecipe}
           />
 
         </RecipesContext.Provider>

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import RecipesContext from '../RecipesContext';
 import RecipeItem from '../RecipeItem/RecipeItem';
-//import PropTypes from 'prop-types';
-//import config from '../config';
 
 export default class ResultList extends Component {
   static defaultProps = {
