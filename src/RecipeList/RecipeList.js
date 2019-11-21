@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import RecipesContext from '../RecipesContext';
 import RecipeItem from '../RecipeItem/RecipeItem';
 
-export default class ResultList extends Component {
+export default class RecipeList extends Component {
   static defaultProps = {
     recipes: []
   }
@@ -20,6 +20,7 @@ export default class ResultList extends Component {
           {recipes.map(recipe => 
             <RecipeItem
               key={recipe.id}
+              id = {recipe.id}
               {...recipe}
             />
           )}
@@ -29,5 +30,8 @@ export default class ResultList extends Component {
   }
 
 };
+
+
+
 
 

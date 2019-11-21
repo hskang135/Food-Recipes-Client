@@ -17,9 +17,7 @@ export default class AddRecipe extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const { foodname, ingredients, description } = e.target;
-    //let endpoints;
-
+    const { foodname, ingredients, description } = e.target; 
     const newRecipe = {
       foodname: foodname.value,
       ingredients: ingredients.value,
@@ -51,7 +49,6 @@ export default class AddRecipe extends Component {
     })
 
   };
-
 
   render() {
     return(
@@ -85,5 +82,8 @@ export default class AddRecipe extends Component {
     )
   }
   
-
 };
+
+
+
+

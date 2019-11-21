@@ -2,11 +2,9 @@ import React from 'react';
 import config from './config';
 import { Route } from 'react-router-dom';
 import RecipesContext from './RecipesContext';
-import SearchSubmit from './SearchSubmit/SearchSubmit';
 import Header from './Header/Header';
 import RecipeList from './RecipeList/RecipeList';
 import AddRecipe from './AddRecipe/AddRecipe';
-import CreatedRecipe from './CreatedRecipe/CreatedRecipe';
 
 export default class App extends React.Component {
   
@@ -14,19 +12,13 @@ export default class App extends React.Component {
     super(props);
     this.state={
       recipes: [],
-      searchName: {
-        results: null,
-        error: null,
-        search: false,
-        loading: false,
-      }
+      search: ''
     }
   };
 
   setRecipes = recipes => {
     this.setState({
       recipes,
-      error: null,
     })
   };
 
@@ -36,9 +28,8 @@ export default class App extends React.Component {
     })
   };
 
-  deleteRecipe = recipeId => {
-    const newRecipe = this.state.recipes.filter(rs =>
-      rs.id !== recipeId
+  deleteRecipe = id => {
+    const newRecipe = this.state.recipes.filter(rs => rs.id !== id
     )
     this.setState({
       recipes: newRecipe
@@ -58,12 +49,6 @@ export default class App extends React.Component {
       recipes: this.state.recipes.map(r =>
         r.id === Number(recipeId) ? {...r, ...recipeData} : r
       )
-    })
-  };
-
-  handleSearchSubmit = (id) => {
-    this.setState({
-      recipes: this.state.recipes.filter(rec => rec.id === id)
     })
   };
 
@@ -106,12 +91,7 @@ export default class App extends React.Component {
           <Header />
         </header>
         <RecipesContext.Provider value={contextValue}>
-          <Route
-            exact 
-            path='/'
-            component={SearchSubmit}
-          />
-
+          
           {['/', '/recipes/:id'].map(path =>
             <Route 
             exact
@@ -127,17 +107,14 @@ export default class App extends React.Component {
             component={AddRecipe}
           />
 
-          <Route 
-            exact
-            path='/myrecipes'
-            component={CreatedRecipe}
-          />
-
         </RecipesContext.Provider>
       </main>
     );
   };
 
 };
+
+
+
 
 
