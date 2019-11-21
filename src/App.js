@@ -29,8 +29,7 @@ export default class App extends React.Component {
   };
 
   deleteRecipe = id => {
-    const newRecipe = this.state.recipes.filter(rs => rs.id !== id
-    )
+    const newRecipe = this.state.recipes.filter(rs => rs.id !== id)
     this.setState({
       recipes: newRecipe
     })

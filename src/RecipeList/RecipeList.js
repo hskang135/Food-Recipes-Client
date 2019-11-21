@@ -9,7 +9,6 @@ export default class RecipeList extends Component {
 
   static contextType = RecipesContext;
   
-
   render() {
     const { recipes } = this.context;
     console.log(recipes);
