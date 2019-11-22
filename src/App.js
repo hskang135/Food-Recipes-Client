@@ -79,8 +79,7 @@ export default class App extends React.Component {
       addRecipe: this.addRecipe,
       deleteRecipe: this.deleteRecipe,
       updatedRecipe: this.updatedRecipe,
-      editRecipe: this.editRecipe,
-      handleSearchSubmit: this.handleSearchSubmit
+      editRecipe: this.editRecipe
     };
     
     return (
@@ -90,7 +89,7 @@ export default class App extends React.Component {
         </header>
 
         <RecipesContext.Provider value={contextValue}>
-          
+
           {['/', '/recipes/:id'].map(path =>
             <Route 
             exact
