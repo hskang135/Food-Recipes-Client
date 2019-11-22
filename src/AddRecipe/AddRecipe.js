@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import RecipesContext from '../RecipesContext';
 import config from '../config';
+import './AddRecipe.css';
 
 const Required = () => (
   <span className='AddRecipe_required'>*</span>
@@ -66,12 +67,12 @@ export default class AddRecipe extends Component {
           <div>
             <label htmlFor="Ingredients">Ingredients <br />
               (Please write seperate by comma): {' '} <Required /></label> <br />
-            <textarea id="ingredients" name="ingredients" rows="5" required></textarea>
+            <textarea id="ingredients" name="ingredients" rows="8" required></textarea>
           </div>
 
           <div>
             <label htmlFor="Description"> Description: {' '} <Required /></label> <br />
-            <textarea id="description" name="description" rows="5" required></textarea>
+            <textarea id="description" name="description" rows="8" required></textarea>
           </div>
           
           <div>

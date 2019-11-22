@@ -1,6 +1,7 @@
 import React from 'react';
 import RecipesContext from '../RecipesContext';
 import config from '../config';
+import './RecipeItem.css';
 
 function deleteRecipeRequest(id, cb) {
   fetch(config.API_ENDPOINT + `/recipes/${id}`, {
@@ -47,6 +48,7 @@ export default function RecipeItem(props) {
                 Delete Recipe
               </button>
             </div>
+
           </li>
         )}
       </RecipesContext.Consumer>

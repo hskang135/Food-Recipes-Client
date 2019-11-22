@@ -38,8 +38,7 @@ export default class App extends React.Component {
   updateRecipe = updatedRecipe => {
     this.setState({
       recipes: this.state.recipes.map(rs =>
-        (rs.id !== updatedRecipe.id) ? rs : updatedRecipe
-      )
+        (rs.id !== updatedRecipe.id) ? rs : updatedRecipe)
     })
   };
 
@@ -89,6 +88,7 @@ export default class App extends React.Component {
         <header className='App_header'>
           <Header />
         </header>
+
         <RecipesContext.Provider value={contextValue}>
           
           {['/', '/recipes/:id'].map(path =>
