@@ -1,0 +1,20 @@
+#foodname,
+#ingredients,
+#description {
+  border: 0.1rem solid black;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 2px 2px 5px rgb(67, 67, 67);
+}
+
+.AddRecipe_form {
+  border: 0.1rem solid black;
+  max-width: 30rem;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+

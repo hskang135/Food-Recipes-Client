@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+}
+
+.recipeItem {
+  list-style:none;
+  margin-right: 2.1rem;
+}
+
+.recipeItem_info {
+  border: 0.1rem solid black;
+  max-width: 47rem;
+  padding-right: 1.2rem;
+  box-shadow: 2px 2px 5px rgb(67, 67, 67);
+}
+
+button {
+  background-color: pink;
+  padding: 0.6rem;
+  font-size: 1.1rem;
+  margin-top: 0.7rem;
+  margin-bottom: 1.7rem;
+  text-align: center;
+}
+
+li {
+  padding-bottom: 1rem;
+  text-align: left;
+}
+
+h3 {
+  text-align: center;
+}

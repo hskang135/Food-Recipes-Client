@@ -15,7 +15,7 @@ export default class RecipeList extends Component {
     
     return(
       <section className='RecipeList'>
-        <ul className='foodname_list'>
+        <ul className='food_list'>
           {recipes.map(recipe => 
             <RecipeItem
               key={recipe.id}

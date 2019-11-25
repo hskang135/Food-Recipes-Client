@@ -4,7 +4,7 @@ import config from '../config';
 import './AddRecipe.css';
 
 const Required = () => (
-  <span className='AddRecipe_required'>*</span>
+  <span className='AddRecipe_required'> * </span>
 );
 export default class AddRecipe extends Component {
   static defaultProps = {
@@ -54,25 +54,26 @@ export default class AddRecipe extends Component {
   render() {
     return(
       <section className='AddRecipe'>
-        <h2> Create New Recipe </h2>
+        <h3> Create New Recipe </h3>
+        
         <form
           className='AddRecipe_form'
           onSubmit={this.handleSubmit}
         >
           <div>
-            <label htmlFor="Name"> Name of Recipe Name: {' '} <Required /></label>
+            <label htmlFor="Name"> Food Recipe Name: {' '} <Required /></label> <br />
             <input type="text" id="foodname" name="recipeName" placeholder="Food Recipe Name" required />
           </div>
 
           <div>
             <label htmlFor="Ingredients">Ingredients <br />
               (Please write seperate by comma): {' '} <Required /></label> <br />
-            <textarea id="ingredients" name="ingredients" rows="8" required></textarea>
+            <textarea id="ingredients" name="ingredients" rows="6" cols="45" required></textarea>
           </div>
 
           <div>
             <label htmlFor="Description"> Description: {' '} <Required /></label> <br />
-            <textarea id="description" name="description" rows="8" required></textarea>
+            <textarea id="description" name="description" rows="6" cols="45" required></textarea>
           </div>
           
           <div>

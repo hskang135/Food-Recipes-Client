@@ -25,33 +25,32 @@ function deleteRecipeRequest(id, cb) {
 
 export default function RecipeItem(props) {
   return (
-      <RecipesContext.Consumer>
-        { (context) => (
-          <li className ='RecipeItem'>
-            <div className = 'RecipeItem_row'>
-              <h2>{props.foodname}</h2>
+    <RecipesContext.Consumer>
+      { (context) => (
+        <div className ='recipeItem'>
+          <div className = 'recipeItem_info'>
+            <h3>{props.foodname}</h3>
               
-              <ul>
-                <li>Ingredients: {props.ingredients}</li>
-                <li>Description: {props.description}</li>
-              </ul>
-            </div>
+            <ul>
+              <li>Ingredients: {props.ingredients}</li>
+              <li>Description: {props.description}</li>
+            </ul>
+          </div>
 
-            <div className='recipesButton'>
-              <button className='delete'
-                onClick={() => {
-                  deleteRecipeRequest(
-                    props.id,
-                    context.deleteRecipe
-                  )
-                }}> 
+          <div className='recipesButton'>
+            <button className='delete'
+              onClick={() => {
+              deleteRecipeRequest(
+                props.id,
+                context.deleteRecipe
+              )
+              }}> 
                 Delete Recipe
-              </button>
-            </div>
-
-          </li>
-        )}
-      </RecipesContext.Consumer>
+            </button>
+          </div>
+        </div>
+      )}
+    </RecipesContext.Consumer>
   )
 
 

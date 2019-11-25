@@ -83,10 +83,14 @@ export default class App extends React.Component {
     };
     
     return (
+      
       <main className='App'>
         <header className='App_header'>
           <Header />
         </header>
+
+        <h2> Welcome to Food Recipes <br />
+          We all can cook! </h2>
 
         <RecipesContext.Provider value={contextValue}>
 

@@ -1,0 +1,33 @@
+.header {
+  background-color: #aaa;
+  justify-content: space-between;
+  padding: 0.3rem;
+  text-align: center;
+}
+
+h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin: 0.3rem;
+  display: inline-flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: pink;
+  padding: 0.3rem;
+}
+
+h2 {
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Handlee', cursive;
+}
+
+
+
+
