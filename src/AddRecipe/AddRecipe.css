@@ -5,7 +5,14 @@
   padding: 0.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 2px 2px 5px rgb(67, 67, 67);
+  box-shadow: 2px 2px 5px #434343;
+  font-size: 1.1rem;
+}
+
+#ingredients,
+#description {
+  height: 9rem;
+  width: 14rem;
 }
 
 .AddRecipe_form {
@@ -14,7 +21,62 @@
   padding: 1.5rem;
   text-align: center;
   margin: 1.6rem;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-family: 'Nunito', sans-serif;
 }
+
+@media screen and (min-width: 768px) {
+  .AddRecipe_form {
+    margin: auto;
+    max-width: 37rem;
+    margin-bottom: 6rem;
+  }
+
+  #foodname,
+  #ingredients,
+  #description {
+    padding: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 2px 2px 5px #434343;
+    font-size: 1.5rem;
+  }
+
+  #ingredients,
+  #description {
+    height: 10rem;
+    width: 30rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h3 {
+    font-size: 2rem;
+  }
+
+  .AddRecipe_form {
+    margin: auto;
+    max-width: 50rem;
+    margin-bottom: 6rem;
+  }
+
+  #foodname,
+  #ingredients,
+  #description {
+    padding: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 2px 2px 5px #434343;
+    font-size: 1.5rem;
+  }
+
+  #ingredients,
+  #description {
+    height: 10rem;
+    width: 35rem;
+  }
+
+}
+
 
 

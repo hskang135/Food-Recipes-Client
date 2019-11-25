@@ -1,33 +1,58 @@
 body {
   text-align: center;
+  background: #fac9c7;
 }
 
 .recipeItem {
   list-style:none;
   margin-right: 2.1rem;
+  font-size: 1.2rem;
+  font-family: 'Nunito', sans-serif;
 }
 
 .recipeItem_info {
   border: 0.1rem solid black;
   max-width: 47rem;
   padding-right: 1.2rem;
-  box-shadow: 2px 2px 5px rgb(67, 67, 67);
+  box-shadow: 2px 2px 5px #434343;
 }
 
 button {
-  background-color: pink;
+  background: #6ecfa3;
   padding: 0.6rem;
   font-size: 1.1rem;
   margin-top: 0.7rem;
   margin-bottom: 1.7rem;
   text-align: center;
+  font-family: 'Nunito', sans-serif;
 }
 
 li {
   padding-bottom: 1rem;
   text-align: left;
+  list-style-type: square;
 }
 
-h3 {
-  text-align: center;
+@media screen and (min-width: 1024px) {
+  .recipeItem {
+    margin: auto;
+    font-size: 1.6rem;
+  }
+
+  .recipeItem_info {
+    margin: auto;
+    max-width: 51rem;
+  }
+
+  button {
+    background: #6ecfa3;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
 }
+
+
+
