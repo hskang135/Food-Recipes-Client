@@ -9,19 +9,19 @@ const context = {
     {
       "id": "cbc787a-ffaf-11e8-8sp2",
       "foodname": "Test food name",
-      "ingrdients": "Test ingredients",
+      "ingredients": "Test ingredients",
       "description": "Test description"
     },
     {
       "id": "cbc787a-ffaf-11e8-8ef4",
       "foodname": "Test food name",
-      "ingrdients": "Test ingredients",
+      "ingredients": "Test ingredients",
       "description": "Test description"
     },
     {
       "id": "cbc787a-ffaf-11e8-8y7i",
       "foodname": "Test food name",
-      "ingrdients": "Test ingredients",
+      "ingredients": "Test ingredients",
       "description": "Test description"
     },
   ]

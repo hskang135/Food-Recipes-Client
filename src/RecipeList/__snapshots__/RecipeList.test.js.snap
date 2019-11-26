@@ -19,6 +19,7 @@ exports[`RecipeList component renders UI expeacted 1`] = `
         <ul>
           <li>
             Ingredients: 
+            Test ingredients
           </li>
           <li>
             Description: 
@@ -49,6 +50,7 @@ exports[`RecipeList component renders UI expeacted 1`] = `
         <ul>
           <li>
             Ingredients: 
+            Test ingredients
           </li>
           <li>
             Description: 
@@ -79,6 +81,7 @@ exports[`RecipeList component renders UI expeacted 1`] = `
         <ul>
           <li>
             Ingredients: 
+            Test ingredients
           </li>
           <li>
             Description: 
