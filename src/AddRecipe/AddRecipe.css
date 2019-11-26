@@ -51,7 +51,11 @@
 
 @media screen and (min-width: 1024px) {
   h3 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
+  }
+
+  label {
+    font-size: 1.8rem;
   }
 
   .AddRecipe_form {

@@ -18,13 +18,13 @@ export default class App extends React.Component {
 
   setRecipes = recipes => {
     this.setState({
-      recipes,
+      recipes
     })
   };
 
   addRecipe = recipe => {
     this.setState({
-      recipes: [ ...this.state.recipes, recipe ],
+      recipes: [ ...this.state.recipes, recipe ]
     })
   };
 

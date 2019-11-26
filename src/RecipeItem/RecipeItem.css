@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #fcca9e;
+  background-color: #facfaa;
 }
 
 .recipeItem {
@@ -18,8 +18,7 @@ body {
 }
 
 button {
-  background-color: #328540;
-  color: white;
+  background-color: #3a9649;
   padding: 0.6rem;
   font-size: 1.1rem;
   margin-top: 0.5rem;
@@ -43,11 +42,10 @@ li {
 
   .recipeItem_info {
     margin: auto;
-    max-width: 51rem;
+    max-width: 52rem;
   }
 
   button {
-    background-color: #328540;
     padding: 0.8rem;
     font-size: 1.5rem;
     margin-top: 1.2rem;
@@ -57,18 +55,10 @@ li {
 
 @media screen and (min-width: 1025px) {
   button {
-    background-color: #328540;
     padding: 0.8rem;
     font-size: 1.5rem;
     margin-top: 1.2rem;
     margin-bottom: 2.5rem;
-    opacity: 0.7;
-    transition: 0.3s;
-    text-decoration: none;
-  }
-
-  button:hover {
-    opacity: 1.3;
   }
 }
 
