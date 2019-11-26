@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background: #fdc8a0;
+  background: #faceac;
 }
 
 .recipeItem {
@@ -18,7 +18,7 @@ body {
 }
 
 button {
-  background: #6ecfa3;
+  background: #81dfb5;
   padding: 0.6rem;
   font-size: 1.1rem;
   margin-top: 0.5rem;

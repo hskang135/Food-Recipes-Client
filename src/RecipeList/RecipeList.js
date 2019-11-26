@@ -11,8 +11,7 @@ export default class RecipeList extends Component {
   
   render() {
     const { recipes } = this.context;
-    console.log(recipes);
-    
+
     return(
       <section className='RecipeList'>
         <ul className='food_list'>

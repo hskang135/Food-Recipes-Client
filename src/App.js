@@ -51,8 +51,6 @@ export default class App extends React.Component {
   };
 
   componentDidMount() {
-    console.log(`${config.API_ENDPOINT}/recipes`);
-
     fetch(`${config.API_ENDPOINT}/recipes`, {
       method: 'GET',
       headers: {
@@ -83,7 +81,6 @@ export default class App extends React.Component {
     };
     
     return (
-      
       <main className='App'>
         <header className='App_header'>
           <Header />
@@ -115,7 +112,6 @@ export default class App extends React.Component {
   };
 
 };
-
 
 
 

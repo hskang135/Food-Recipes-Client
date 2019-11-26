@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecipeList component renders UI expeacted 1`] = `
+<section
+  className="RecipeList"
+>
+  <ul
+    className="food_list"
+  >
+    <div
+      className="recipeItem"
+    >
+      <div
+        className="recipeItem_info"
+      >
+        <h3>
+          Test food name
+        </h3>
+        <ul>
+          <li>
+            Ingredients: 
+          </li>
+          <li>
+            Description: 
+            Test description
+          </li>
+        </ul>
+      </div>
+      <div
+        className="recipesButton"
+      >
+        <button
+          className="delete"
+          onClick={[Function]}
+        >
+          Delete Recipe
+        </button>
+      </div>
+    </div>
+    <div
+      className="recipeItem"
+    >
+      <div
+        className="recipeItem_info"
+      >
+        <h3>
+          Test food name
+        </h3>
+        <ul>
+          <li>
+            Ingredients: 
+          </li>
+          <li>
+            Description: 
+            Test description
+          </li>
+        </ul>
+      </div>
+      <div
+        className="recipesButton"
+      >
+        <button
+          className="delete"
+          onClick={[Function]}
+        >
+          Delete Recipe
+        </button>
+      </div>
+    </div>
+    <div
+      className="recipeItem"
+    >
+      <div
+        className="recipeItem_info"
+      >
+        <h3>
+          Test food name
+        </h3>
+        <ul>
+          <li>
+            Ingredients: 
+          </li>
+          <li>
+            Description: 
+            Test description
+          </li>
+        </ul>
+      </div>
+      <div
+        className="recipesButton"
+      >
+        <button
+          className="delete"
+          onClick={[Function]}
+        >
+          Delete Recipe
+        </button>
+      </div>
+    </div>
+  </ul>
+</section>
+`;
