@@ -1,7 +1,7 @@
 .header {
   background: #575063;
   justify-content: space-between;
-  padding: 0.3rem;
+  padding: 0.2rem;
   text-align: center;
 }
 
@@ -11,18 +11,18 @@ h1 a {
 }
 
 h1 a:hover {
-  color: #f8a4b2;
+  color: #f78497;
 }
 
 h1 {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  margin: 0.3rem;
+  margin: 0.2rem;
   display: inline-flex;
   align-content: center;
   justify-content: center;
   flex-direction: row;
-  padding: 0.3rem;
+  padding: 0.2rem;
 }
 
 h2 {

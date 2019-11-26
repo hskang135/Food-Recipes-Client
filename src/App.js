@@ -86,7 +86,7 @@ export default class App extends React.Component {
           <Header />
         </header>
 
-        <h2> Welcome to Food Recipes <br />
+        <h2> Welcome to FoodRecipes <br />
           We all can cook! </h2>
 
         <RecipesContext.Provider value={contextValue}>
