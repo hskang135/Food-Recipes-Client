@@ -18,7 +18,8 @@ body {
 }
 
 button {
-  background-color: #3a9649;
+  background-color: #1a7e2b;
+  color: white;
   padding: 0.6rem;
   font-size: 1.1rem;
   margin-top: 0.5rem;
@@ -58,7 +59,12 @@ li {
     padding: 0.8rem;
     font-size: 1.5rem;
     margin-top: 1.2rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.8rem;
+  }
+
+  .recipeItem_info {
+    margin: auto;
+    max-width: 56rem;
   }
 }
 
