@@ -34,7 +34,7 @@ exports[`AddReceipe component renders the complete form 1`] = `
       <label
         htmlFor="Ingredients"
       >
-        Ingredients 
+         Ingredients 
         <br />
         (Please write seperate by comma): 
          

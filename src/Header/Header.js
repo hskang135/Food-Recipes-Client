@@ -13,8 +13,6 @@ export default class Header extends Component {
           </Link>
         </h1>
 
-        <img src="logo.png" name='logo' alt='logo' />
-
         <h1 className="myrecipes">
           <Link to='/myrecipes'> 
             My Recipes 
