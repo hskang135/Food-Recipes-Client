@@ -66,7 +66,7 @@ export default class AddRecipe extends Component {
           </div>
 
           <div>
-            <label htmlFor="Ingredients">Ingredients <br />
+            <label htmlFor="Ingredients"> Ingredients <br />
               (Please write seperate by comma): {' '} <Required /></label> <br />
             <textarea id="ingredients" name="ingredients" rows="6" cols="45" required></textarea>
           </div>
