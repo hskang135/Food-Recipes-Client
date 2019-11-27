@@ -18,7 +18,7 @@ export default class RecipeList extends Component {
           {recipes.map(recipe => 
             <RecipeItem
               key={recipe.id}
-              id = {recipe.id}
+              id={recipe.id}
               {...recipe}
             />
           )}
