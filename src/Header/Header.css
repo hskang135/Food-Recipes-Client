@@ -11,9 +11,9 @@
 }
 
 .header img{
-  height: 1.7rem;
+  height: 1.6rem;
   width: 9rem;
-  margin-top: 0.8rem;
+  margin-top: 0.9rem;
 }
 
 h1 a {
@@ -34,7 +34,7 @@ h1 {
   align-content: center;
   justify-content: center;
   flex-direction: row;
-  padding: 0.7rem;
+  padding: 0.72rem;
 }
 
 h2 {
@@ -43,9 +43,6 @@ h2 {
   font-size: 1.8rem;
   font-family: 'Handlee', cursive;
   margin-top: 4rem;
-}
-
-@media screen and (min-width: 1024px) {
 }
 
 @media screen and (min-width: 1025px) {
