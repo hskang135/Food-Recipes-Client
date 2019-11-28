@@ -1,6 +1,4 @@
-# File with heading
-
-App Name: FoodRecipes
+# App Name: FoodRecipes
 
 This is project live page: [FoodRecipes](https://foodrecipes.now.sh/)
 
