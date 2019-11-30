@@ -19,8 +19,11 @@ This application base on browser router to handle the URL with using context syn
 
 ## Screenshots
 
+Main Home Page
 ![Main Home Page](./screenshot/home.png)
-![My Recipes Page to Create New Recipes](./screenshot/myrecipes.png)
+
+My Recipes Page
+![My Recipes Page with Create New form](./screenshot/myrecipes.png)
 
 If you want to try to run this application locally, simply git clone the repos. And 'npm run start' both of these.
 [Client](https://github.com/hskang135/Food-Recipes-Client)
