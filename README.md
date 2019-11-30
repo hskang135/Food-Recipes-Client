@@ -17,6 +17,12 @@ For the API server side, app used by Express.js, Node.js, PostgreSQL, snapshot t
 
 This application base on browser router to handle the URL with using context syntax and connect primary components ( list, items, forms, header, and etc... ) inside of the src folder.
 
+If you want to try to run this application locally, simply git clone the repos. And 'npm run start' both of these.
+
+[Client](https://github.com/hskang135/Food-Recipes-Client)
+
+[API Server](https://github.com/hskang135/Food-Recipes-Server)
+
 ## Screenshots
 
 Main Home Page
@@ -24,9 +30,5 @@ Main Home Page
 
 My Recipes Page
 ![My Recipes Page with Create New form](./screenshot/myrecipes.png)
-
-If you want to try to run this application locally, simply git clone the repos. And 'npm run start' both of these.
-[Client](https://github.com/hskang135/Food-Recipes-Client)
-[API Server](https://github.com/hskang135/Food-Recipes-Server)
 
 Created by Heesu Kang
