@@ -21,6 +21,7 @@ Also, when they are in 'My Recipes' page, they can able to create new recipes as
 
 If you want to try to run this application locally, simply git clone the repos.
 And 'npm run start' both sides.
+
 [Client](https://github.com/hskang135/Food-Recipes-Client)
 [API Server](https://github.com/hskang135/Food-Recipes-Server)
 
