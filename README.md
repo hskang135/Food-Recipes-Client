@@ -19,8 +19,7 @@ This application base on browser router to handle the URL with using context syn
 For any users, they can able to see all of food recipes with food name, ingredients and description.
 Also, when they are in 'My Recipes' page, they can able to create new recipes as well.
 
-If you want to try to run this application locally, simply git clone the repos.
-And 'npm run start' both sides.
+If you want to try to run this application locally, simply git clone the repos, and 'npm run start' both sides.
 
 [Client](https://github.com/hskang135/Food-Recipes-Client)
 [API Server](https://github.com/hskang135/Food-Recipes-Server)
