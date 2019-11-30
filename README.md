@@ -4,7 +4,8 @@ This is project live page: [FoodRecipes](https://foodrecipes.now.sh/)
 
 ## About Application
 
-"FoodRecipes" is an app for everyone who wants to cook for meals or desserts. If you cannot remember what is the recipes you can get detail recipes in the "FoodRecipes" app.
+"FoodRecipes" is an app for everyone who wants to cook for meals or desserts. 
+If you cannot remember what is the recipes you can get detail recipes in the "FoodRecipes" app.
 Share your favorite food recipes with other people who want to try your recipes.
 You can try other people's recipes which you like or try it yourself.
 We all can cook any country foods easily, and proud of ourselves when we eat cooked foods with family or friends nearby you.
