@@ -11,15 +11,13 @@
       "src": ".*",
       "dest": "/index.html"
     },
-    { "src": "^/manifest.json", 
+    { 
+      "src": "^/manifest.json$", 
       "dest": "/manifest.json" 
     },
     {
       "src": "^/favicon.ico$",
       "dest": "/favicon.ico"
-    },
-    {
-      "handle":"filesystem"
     }
   ]
 }

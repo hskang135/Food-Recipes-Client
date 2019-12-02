@@ -53,10 +53,6 @@ export default function RecipeItem(props) {
     </RecipesContext.Consumer>
   )
 
-
 };
-
-
-
 
 
