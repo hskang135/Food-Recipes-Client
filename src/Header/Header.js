@@ -5,8 +5,9 @@ import './Header.css';
 export default class Header extends Component {
 
   render() {
-    return(
+    return (
       <div className="header">
+
         <h1 className="homepage">
           <Link to='/'>
             Home
