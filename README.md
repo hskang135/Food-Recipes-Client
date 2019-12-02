@@ -1,6 +1,6 @@
 # App Name: FoodRecipes
 
-This is project live page: [FoodRecipes](https://foodrecipes.hskang135.now.sh/)
+This is project live page: [FoodRecipes](https://foodrecipes.now.sh/)
 
 ## About Application
 
