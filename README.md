@@ -30,7 +30,7 @@ If you want to try to run this application locally, simply git clone the repos, 
 Main Home Page
 ![Main Home Page](./screenshot/home.png)
 
-My Recipes Page
-![My Recipes Page with Create New form](./screenshot/myrecipes.png)
+Create New Recipe Page
+![Create New Recipe](./screenshot/createrecipes.png)
 
 Created by Heesu Kang
