@@ -23,6 +23,7 @@ If users don't like their recipes, they can remove anytime.
 Also, when they are in 'Create New Recipe' page, users able to create new recipes anytime and what they want.
 
 If you want to try to run this application locally, simply git clone the repos, and 'npm run start' both sides.
+
 [Client](https://github.com/hskang135/Food-Recipes-Client) | [API Server](https://github.com/hskang135/Food-Recipes-Server) | [Heroku](https://whispering-dawn-16121.herokuapp.com/)
 
 ## Screenshots
