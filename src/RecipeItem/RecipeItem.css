@@ -12,7 +12,7 @@ body {
 
 .recipeItem_info {
   border: 0.1rem solid black;
-  max-width: 47rem;
+  max-width: 46rem;
   padding-right: 1.2rem;
   box-shadow: 2px 2px 5px #424141;
 }

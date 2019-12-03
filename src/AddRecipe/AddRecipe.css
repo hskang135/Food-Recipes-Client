@@ -12,7 +12,7 @@
 #ingredients,
 #description {
   height: 9rem;
-  width: 14rem;
+  width: 12.8rem;
 }
 
 .AddRecipe_form {
@@ -60,7 +60,7 @@
 
   .AddRecipe_form {
     margin: auto;
-    max-width: 50rem;
+    max-width: 57rem;
     margin-bottom: 6rem;
   }
 
@@ -80,8 +80,8 @@
 
   #ingredients,
   #description {
-    height: 15rem;
-    width: 35rem;
+    height: 18rem;
+    width: 37rem;
   }
 }
 
