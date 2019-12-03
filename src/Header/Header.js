@@ -16,7 +16,7 @@ export default class Header extends Component {
 
         <h1 className="myrecipes">
           <Link to='/myrecipes'> 
-            My Recipes 
+            Create New Recipe 
           </Link>   
         </h1>
       </div>  
