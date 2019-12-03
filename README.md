@@ -18,7 +18,8 @@ For the API server side, app used by Express.js, Node.js, PostgreSQL, snapshot t
 This application base on browser router to handle the URL with using context syntax and connect primary components inside of src folder.
 
 For any users, they can able to see all of food recipes with food name, ingredients and description.
-Also, when they are in 'My Recipes' page, they can able to create new recipes as well.
+If users don't like their recipes, they can remove anytime.
+Also, when they are in 'My Recipes' page, users able to create new recipes anytime.
 
 If you want to try to run this application locally, simply git clone the repos, and 'npm run start' both sides.
 
