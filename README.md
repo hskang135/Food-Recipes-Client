@@ -14,6 +14,7 @@ The "FoodRecipes" app will be best food recipes friend for everyone in the world
 ## Technical
 
 Client: React.js, Javascript, HTML, and CSS
+
 API Server: Express.js, Node.js, PostgreSQL, mocha, chai, and super test
 
 FoodRecipes application base on browser router to handle the URL with using context syntax and connect primary components inside of src folder.
